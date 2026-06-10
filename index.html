@@ -20,19 +20,47 @@
         <a href="about" class="text-(--bg) no-underline text-base opacity-85 hover:opacity-100 transition-opacity">About</a>
         <a href="contact" class="text-(--bg) no-underline text-base opacity-85 hover:opacity-100 transition-opacity">Contact</a>
         </div>
+        <div class="flex items-center space-x-1 bg-gray-100 rounded-lg border border-gray-200"> 
+            <button id="btn-en"
+                      class="px-3 py-1 text-xs font-medium rounded-md trandition-all bg-white text-emerald-800 shadow-sm"
+                      onclick="switchLang('en')">English</button>
+                      <button id="btn-hi"
+                      class="px-3 py-1 text-xs font-medium rounded-md transition-all bg-white text-emerald-800 shadow-sm"
+                      onclick="switchLang('hi')">हिन्दी</button>
+        </div>
          </nav> 
         <div class="flex flex-col justify-center items-start gap-5 py-20 px-16  max-w-170">
             <h1 class="text-left text-(--bg) font-normal text-4xl md:text-5xl leading-tight max-w-170">When a home is built, it's not just walls that rise — a dream does too.</h1>
             <p class="max-w-125 text-(--bg) font-normal leading-relaxed text-lg md:text-2xl opacity-85"> Sthapati connects you with verified engineers and traditional building wisdom.
 
             </p>
-         <div class="flex lfex-col sm:flex-row flex-wrap gap-4 items-start sm:items-center">
+         <div class="flex flex-col sm:flex-row flex-wrap gap-4 items-start sm:items-center">
         <button class="bg-(--accent) text-(--bg) font-semibold py-3 px-6 rounded-md hover:bg-(--accent-hover) transition-colors duration-300"> I want to build a home </button>
         
         <button class="bg-(--accent) text-(--bg) font-semibold py-3 px-6 rounded-md hover:bg-(--accent-hover) transition-colors duration-300">I am an Engineer / Architect</button>
         <button class="bg-(--accent) text-(--bg) font-semibold py-3 px-6 rounded-md hover:bg-(--accent-hover) transition-colors duration-300">I am a Craftsman</button>
         </div>
-    </div>   
+    </div>  
+     <div class="lang-hi hidden" style="display: none;">
+    <div class="flex flex-col justify-center items-start gap-5 py-20 px-16 max-w-170">
+    <h1 class="text-left text-(--bg) font-normal text-4xl md:text-5xl leading-tight max-w-170">
+        जब एक घर बनता है, तो सिर्फ दीवारें खड़ी नहीं होतीं—एक परिवार के सपनों को छत मिलती है।
+    </h1>
+    <p class="max-w-125 text-(--bg) font-normal leading-relaxed text-lg md:text-2xl opacity-85"> 
+        स्थपति आपको जोड़ता है प्रमाणित इंजीनियरों और पारंपरिक निर्माण कला के गहरे ज्ञान से।
+    </p>
+    <div class="flex flex-col sm:flex-row flex-wrap gap-4 items-start sm:items-center">
+        <button class="bg-(--accent) text-(--bg) font-semibold py-3 px-6 rounded-md hover:bg-(--accent-hover) transition-colors duration-300"> 
+            मुझे घर बनवाना है 
+        </button>
+        <button class="bg-(--accent) text-(--bg) font-semibold py-3 px-6 rounded-md hover:bg-(--accent-hover) transition-colors duration-300">
+            मैं इंजीनियर / आर्किटेक्ट हूँ
+        </button>
+        <button class="bg-(--accent) text-(--bg) font-semibold py-3 px-6 rounded-md hover:bg-(--accent-hover) transition-colors duration-300">
+            मैं मिस्त्री / कारीगर हूँ
+        </button>
+    </div>
+</div>
          </header>
 <!-- section-1 -->
          <section class="min-h-screen w-full bg-(--bg) py-20 px-6 md:px-20 text-2xl ">
@@ -44,7 +72,18 @@
             <h2 class =" text-3xl  md:text-5xl leading-tight text-(--primary) tracking-tight">
                 In India, a home is built only once — with a lifetime of earnings and a lifetime of dreams. Sthapati ensures that dream rests in the right hands.
             </h2>
-         </div>
+          </div>
+
+          <!-- HIndi translation -->
+          <div class="lang-hi hidden mb-20 max-w-3xl">
+             <p class="text-(--accent) font-sans font-semibold uppercase tracking-widest text-xs mb-8">
+        सिर्फ एक प्लटफॉर्म नहीं। एक पक्का वादा।
+              </p>
+              <h2 class="text-3xl md:text-5xl leading-tight text-(--primary) tracking-tight">
+        भारत में घर जिंदगी में सिर्फ एक ही बार बनता है—पूरी उम्र की गाढ़ी कमाई और जीवनभर के संजोए सपनों से। स्थपति यह पक्का करता है कि आपका वह सपना बिल्कुल सही हाथों में हो।
+             </h2>
+                </div>
+
          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
             <div class="group border-t border-(--bg) pt-8 flex flex-xol md:flex-row gap-6 hover:border-(--primary) transition-colors duration-500">
                 <div class=" text-6xl md:text-7xl font-light tracking-tighter text-(--text) group-hover:text-(--accent) transition-colors duration-500 select-none leading-none">01
@@ -58,6 +97,16 @@
                         Every architect and engineer on Sthapati is rigorously vetted. Real credentials, real accountability—so you can build with absolute confidence.
                     </P>
                 </div>
+                <div class="lang-hi hidden  flex-1">
+                    <h3 class="text-2xl font-medium mb-6 text-(--primary) ground-hover:translate-x-1 transition-transform duration-300">
+                      जवाबदेही और पक्का भरोसा
+                    </h3>
+                    <p class="text-(--text) leading-relaxed text-base">
+                     स्थपति पर मौजूद हर आर्किटेक्ट और इंजीनियर की पूरी जांच की जाती है। असली पहचान, असली जिम्मेदारी—ताकि आप बिना किसी डर ke पूरे भरोसे के साथ अपना घर बना सकें।
+                    </p>
+
+
+                </div>
                 </div>
                 <div class="group border-t border-(--bg) pt-8 flex flex-xol md:flex-row gap-6 hover:border-(--primary) transition-colors duration-500">
                     <div class="text-6xl md:text-7xl font-light tracking-tighter text-(--text) group-hover:text-(--accent) transition-colors duration-500 select-none leading-none">02
@@ -69,6 +118,15 @@
                     </h3>
                     <P class="text-(--text) leading-relaxed text-base">
                        From cooling jaali work to wind-oriented design, we bring back Rajasthan’s time-tested traditional secrets to build climate-smart, sustainable homes.
+                    </P>
+                </div>
+                <!-- hindi translation -->
+                <div class="lang-hi hidden flex-1"> 
+                    <h3 class="text-2xl font-medium mb-6 text-(--primary) group-hover:translate-x-1 transition-transform duration-300">
+                      बरसों पुरानी परंपरा को दें बढ़ावा
+                    </h3>
+                    <P class="text-(--text) leading-relaxed text-base">
+                     घर को ठंडा रखने वाली जाली के काम से लेकर हवा के रुख वाले डिज़ाइन तक, हम राजस्थान के पुराने और असरदार तरीकों को वापस ला रहे हैं—ताकि आज के मौसम के हिसाब से मजबूत और इको-फ्रेंडली घर बनाए जा सकें। 
                     </P>
                 </div>
                 </div>
@@ -84,6 +142,15 @@
                         Decades of undocumented skill deserve true recognition. Sthapati gives traditional Mistris a voice and a platform, celebrating a lifetime of building.
                     </P>
                 </div>
+                 <!--hindi translation  -->
+                <div class="lang-hi hidden flex-1"> 
+                    <h3 class="text-2xl font-medium mb-6 text-(--primary) group-hover:translate-x-1 transition-transform duration-300">
+                      हुनर के उस्तादों का सम्मान
+                    </h3>
+                    <P class="text-(--text) leading-relaxed text-base">
+                       पीढ़ियों पुराने अनकहे हुनर को अब असली पहचान मिलेगी। 'स्थपति' हमारे पारंपरिक मिस्त्रियों को दे रहा है एक आवाज़ और एक मंच, ताकि उनकी उम्र भर की मेहनत को पूरा सम्मान मिल सके।
+                    </P>
+                </div>
                 </div>
                 <div class="group border-t border-(--bg) pt-8 flex flex-xol md:flex-row gap-6 hover:border-(--primary) transition-colors duration-500">
                 <div class=" text-6xl md:text-7xl font-light tracking-tighter text-(--text) group-hover:text-(--accent) transition-colors duration-500 select-none leading-none">04
@@ -94,6 +161,14 @@
                     </h3>
                     <P class="text-(--text) leading-relaxed text-base">
                        <strong>A home that tells your story </strong><br>  Don't settle for the same copy-paste design as everyone else on the street. We connect you with visionaries who create spaces as unique as you are.
+                    </P>
+                </div>
+                 <div class="lang-hi hidden flex-1"> 
+                    <h3 class="text-2xl font-medium mb-6 text-(--primary) group-hover:translate-x-1 transition-transform duration-300">
+                       घर आपका है, तो कॉपी-पेस्ट क्यों? 
+                    </h3>
+                    <P class="text-(--text) leading-relaxed text-base">
+                       <strong> जब आपकी कहानी अलग है, तो आपका घर दूसरों जैसा क्यों दिखे? </strong><br> पूरी गली में एक जैसा बोरिंग डिज़ाइन चुनना बंद करो। हम आपको मिलाएंगे ऐसे डिज़ाइनर्स से, जो आपके लिए कुछ ऐसा बनाएंगे जो सिर्फ और सिर्फ आपसे मैच करे। 
                     </P>
                 </div>
                 </div>
@@ -110,7 +185,10 @@
                         Three User. One Platform</p>
                     <h2 class="text-3xl md:text-5xl text-(--primary) tracking-tight">Who is the Sthapati For?
                     </h2>
+                    <h2 class="lang-hi hidden text-3xl md:text-5xl text-(--primary) tracking-tight">आखिर Sthapati है किसके लिए?
+                    </h2>
                 </div>
+                
             <div class="grid grid-cols-1 1g:grid-cols-3 gap-8 itmes-stretch">
                 <!-- homeowners -->
               <div class="group bg-white border border-stone-200 p-10 rounded-2xl shadow-xz hover:shadow-xl hoverr:-translate-y-1 transition-all duration-500 flex flex-col justify-between relative overflow-hidden">
@@ -127,11 +205,30 @@
                          Your home is built once. Make sure it's built right.
                         </p>
                     </div>
+                           <!-- hindi translation -->
+                     <div class="lang-hi hidden">
+                    <span class="text-xs font-sans font-semibold uppercase tracking-wider text-stone-400 group-hover:text-(--accent) transition-colors duration-300">
+                        The Visionary
+                    </span>
+                    <h3 class="'font-serif text-3xl font-medium mt-2 mb-6 text-(--primary)">
+                       Homeowner
+                    </h3>
+                    <p class="font-serif text-lg text-stone-700 italic leading-relaxed before:content-['“'] after:content-['”']">
+                       आपका घर एक ही बार बनता है। सुनिश्चित करें कि यह सही तरीके से बना हो। 
+                        </p>
+                    </div>
                 <div class="mt-8 pt-6 border-t border-stone-100 flex item-center justify-between text-sm font-medium text-(--primary)">
                 <span>Explore traditional blueprints</span>
                 <span class="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                </div>
-               </div>  
+                       <!-- hindi translation -->
+                <div class="lang-hi hidden" style="display: none;">
+               <div class=" mt-8 pt-6 border-t border-stone-100  text-sm font-medium text-(--primary) flex item-center justify-between">
+                <span>पारंपरिक ब्लूप्रिंट का अन्वेषण करें </span>
+                <span class="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+               </div>
+               </div> 
+               </div> 
                </div>
               <div class="group bg-white border border-stone-200 p-10 rounded-2xl shadow-xz hover:shadow-xl hoverr:-translate-y-1 transition-all duration-500 flex flex-col justify-between relative overflow-hidden">
                <div class="absolute top-0 left-0 w-full h-1 bg-(--accent) opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -145,9 +242,27 @@
                    Real projects. Real clients. Real recognition.
                  </p>
               </div> 
+              <!-- hindi translation -->
+             <div class="lang-hi hidden" style="display: none;">
+                <span class=" text-xs font-sans font-semibold uppercase tracking-wider text-stone-400 group-hover:text-(--primary) transition-colors duration-300">
+                  The Expert  </span>
+                 <h3 class="font-serif text-3xl font-medium mt-2 mb-6 text-(--primary)">Enigneer/Architect
+                 </h3>
+                 <p class="font-serrif text-lg text-stone-700 italic leading-relaxed before:content-['“'] after:content-['”']">
+                  
+असली प्रोजेक्ट्स। असली क्लाइंट्स। असली पहचान।
+                 </p>
+              </div> 
               <div class="mt-8 pt-6 border-t border-stone-100 flex items-center justify-between text-sm font-medium text-(--primary)">
                 <span>Build your verified profile</span>
                 <span class="transform group-hover:translate-x-l transition-transform duration-300">→</span>
+                </div>
+                <!-- hindi translation -->
+                <div class="lang-hi hidden" style="display: none;">
+                <div class="mt-8 pt-6 border-t border-stone-100 flex items-center justify-between text-sm font-medium text-(--primary)">
+                <span> अपना वेरिफ़ाइड प्रोफ़ाइल बनाएँ</span>
+                <span class="transform group-hover:translate-x-l transition-transform duration-300">→</span>
+                </div>
                 </div>
               </div>
               <div class="group bg-white border border-stone-200 p-10 rounded-2xl shadow-xz hover:shadow-xl hoverr:-translate-y-1 transition-all duration-500 flex flex-col justify-between relative overflow-hidden">
@@ -160,9 +275,24 @@
                    Your craft deserves a platform. Here it is.
                 </p>
                </div>
+               <!-- hindi translation -->
+               <div class="lang-hi hidden" style="display:none;">
+                <span class="text-xs font-sans font-semibond uppercase tracking-wider text-stone-400 group-hover:text-(--accent) transition-colors duration-300">The Master Craftsman</span>
+                <h3 class="font-serif  text-3xl font-medium mt-2 mb-6 text-(--primary)">Mistri</h3>
+                <p class="font-serif text-lg text-stone-700 italic leading-relaxed before:content-['“'] after:content-['”']">
+                  आपकी कला एक मंच की हकदार है। यह रहा वह मंच। 
+                </p>
+               </div>
                <div class="mt-8 pt-6 border-t border-stone-100 flex items-center justify-between text-sm font-medium text-(--primary)">
                 <span>
                     Claim your recognition
+                </span>
+                <span class="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+               </div>
+               <!--hindi translation  -->
+               <div class="mt-8 pt-6 border-t border-stone-100 flex items-center justify-between text-sm font-medium text-(--primary)">
+                <span class="lang-hi hidden" style="display:none;">
+                   अपनी पहचान का दावा करें
                 </span>
                 <span class="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                </div>
@@ -170,7 +300,7 @@
             </div>
             </div>
          </section>
-
+<!-- section-3  // form registration -->
          <section class="min-h-screen w-full bg-(--bg) flex flex-col justify-center items-center  py-12 px-4 ">
             <div class="text-center max-w-xl mb-10">
             
@@ -183,6 +313,18 @@
            engineer, or mistri."
             </p>
          </div>
+         <!-- hindi translation -->
+          <div class=" lang-hi hidden text-center max-w-xl mb-10">
+            
+            <h2 class="text-3xl md:text-5xl text-(--primary) tracking-tight">
+            हमारे साथ जुड़ें
+            </h2>
+            <p class="text-(--accent) text-sm italic">
+            "स्थपति जल्द ही आ रहा है। 
+           वेटलिस्ट में शामिल हों — घर के मालिक, 
+           इंजीनियर या मिस्त्री के तौर पर।"
+            </p>
+         </div>
         <form
          action="https://formspree.io/f/mqeoqlna" method="POST"
          class=" w-full max-w-md bg-white p-8 rounded-xl shadow-sm border border-stone-200/60 space-y-5">
@@ -190,6 +332,7 @@
                 <label class="block text-xs font-sans font-semibold uppercase tracking-wider text-stone-500 mb-2">Full Name </label>
                 <input type="text" placeholder="e.g., Lochan Saini"  name="name" class="w-full max-w-md bg-stone-50 border border-stone-200 rounded-xl p-4 py-3 text-sm focus:outline-none focus:border-(--primary) focus:bg-white transition-all duration-300">
             </div>
+            
             <div>
                 <label class="block text-xs font-sans font-semibold uppercase tracking-wider text-stone-500 mb-2">Email </label>
                 <input type="email" placeholder="e.g., example@email.com" name="email" class="w-full max-w-md bg-stone-50 border border-stone-200 rounded-xl p-4 py-3 text-sm focus:outline-none focus:border-(--primary) focus:bg-white transition-all duration-300">
@@ -225,5 +368,6 @@
                     </div>
                 </div>
             </footer>
+            <script src="index.js"></script>
 </body>
 </html>
